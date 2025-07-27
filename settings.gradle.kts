@@ -17,7 +17,13 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    // BU BLOĞUN SADECE BİR TANE OLDUĞUNDAN EMİN OL:
+    versionCatalogs {
+        create("libs") {
+            from(files("gradle/libs.versions.toml"))
+        }
+    }
 }
 
-rootProject.name = "Guard"
+rootProject.name = "Guard" // Senin projenin adı
 include(":app")
